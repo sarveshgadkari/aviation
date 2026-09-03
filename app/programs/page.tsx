@@ -31,7 +31,7 @@ export default function ProgramsPage() {
         </p>
       </PageHero>
 
-      <section className="wrap py-24 md:py-32">
+      <section className="wrap py-16 sm:py-24 md:py-32">
         <Reveal>
           <p className="eyebrow">
             <span className="eyebrow-line" />
@@ -44,7 +44,7 @@ export default function ProgramsPage() {
         <div className="mt-12 grid md:grid-cols-2 gap-5">
           {named.items.map((item, i) => (
             <Reveal key={item.slug} delay={i * 80}>
-              <article id={item.slug} className="luxury-card p-7 md:p-8 scroll-mt-28">
+              <article id={item.slug} className="luxury-card p-5 sm:p-7 md:p-8 scroll-mt-28">
                 <span className="text-[0.65rem] uppercase tracking-[0.18em]" style={{ color: "var(--gold)" }}>
                   Program {ROMAN[i]}
                 </span>
@@ -78,7 +78,7 @@ export default function ProgramsPage() {
       <div className="wrap py-16 md:py-24 grid gap-5">
         {programAreas.map((p, i) => (
           <Reveal key={p.slug} delay={(i % 2) * 60}>
-            <section id={p.slug} className="luxury-card p-7 md:p-10 scroll-mt-28">
+            <section id={p.slug} className="luxury-card p-5 sm:p-7 md:p-10 scroll-mt-28">
               <div className="flex flex-wrap items-center justify-between gap-3">
                 <span className="text-[0.65rem] uppercase tracking-[0.18em]" style={{ color: "var(--gold)" }}>
                   Pathway {ROMAN[i]} · {p.code}
@@ -120,7 +120,7 @@ export default function ProgramsPage() {
           <h2 className="display-title text-4xl md:text-5xl">
             Ready to <em className="display-italic">Start?</em>
           </h2>
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
+          <div className="cta-group mt-8 justify-center">
             <Link href="/students" className="btn-solid px-7 py-3.5 text-[0.72rem] uppercase tracking-[0.16em]">
               Apply as a Student
             </Link>

@@ -19,8 +19,8 @@ const pillars = [
 
 export default function Intro() {
   return (
-    <section id="intro" className="relative py-24 md:py-32">
-      <div className="wrap grid lg:grid-cols-[1.15fr_0.85fr] gap-16 items-start">
+    <section id="intro" className="relative py-16 sm:py-24 md:py-32">
+      <div className="wrap grid lg:grid-cols-[1.15fr_0.85fr] gap-10 lg:gap-16 items-start">
         <Reveal>
           <p className="eyebrow">
             <span className="eyebrow-line" />
@@ -38,7 +38,7 @@ export default function Intro() {
           <p className="mt-4 text-base leading-relaxed" style={{ color: "var(--muted)" }}>
             {site.intro.body}
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="cta-group mt-8">
             <Link href="/about" className="btn-outline px-6 py-3 text-[0.72rem] uppercase tracking-[0.16em]">
               About Us
             </Link>

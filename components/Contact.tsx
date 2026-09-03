@@ -8,7 +8,7 @@ export default function Contact() {
   const c = site.contact;
   return (
     <>
-      <section className="relative overflow-hidden py-24 md:py-32">
+      <section className="relative overflow-hidden py-16 sm:py-24 md:py-32">
         <Atmosphere />
         <div className="wrap relative text-center">
           <Reveal>
@@ -23,7 +23,7 @@ export default function Contact() {
             <p className="mt-6 max-w-2xl mx-auto text-lg leading-relaxed" style={{ color: "var(--ink-soft)" }}>
               {c.body}
             </p>
-            <div className="mt-10 flex flex-wrap justify-center gap-3">
+            <div className="cta-group mt-10 justify-center">
               <Link href="/contact" className="btn-solid px-7 py-3.5 text-[0.72rem] uppercase tracking-[0.16em]">
                 Initiate Inquiry
               </Link>
@@ -35,8 +35,8 @@ export default function Contact() {
         </div>
       </section>
 
-      <section id="contact" className="py-24 md:py-32" style={{ background: "var(--bg-2)" }}>
-        <div className="wrap grid lg:grid-cols-[0.9fr_1.1fr] gap-16 items-start">
+      <section id="contact" className="py-16 sm:py-24 md:py-32" style={{ background: "var(--bg-2)" }}>
+        <div className="wrap grid lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-16 items-start">
           <Reveal>
             <p className="eyebrow">
               <span className="eyebrow-line" />

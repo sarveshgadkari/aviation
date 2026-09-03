@@ -39,6 +39,7 @@ html {
   scroll-behavior: smooth;
   background: var(--bg);
   color-scheme: dark;
+  overflow-x: hidden;
 }
 
 body {
@@ -46,6 +47,8 @@ body {
   color: var(--cream);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -85,7 +88,13 @@ body {
   width: 100%;
   max-width: 1180px;
   margin-inline: auto;
-  padding-inline: 1.5rem;
+  padding-inline: 1rem;
+}
+
+@media (min-width: 480px) {
+  .wrap {
+    padding-inline: 1.5rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -97,13 +106,22 @@ body {
 .eyebrow {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
+  flex-wrap: wrap;
+  gap: 0.55rem 0.75rem;
+  max-width: 100%;
   font-family: var(--font-body);
-  font-size: 0.68rem;
+  font-size: 0.62rem;
   font-weight: 500;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--gold);
+}
+
+@media (min-width: 640px) {
+  .eyebrow {
+    font-size: 0.68rem;
+    letter-spacing: 0.22em;
+  }
 }
 
 .eyebrow-line {
@@ -440,10 +458,12 @@ textarea:focus-visible {
   pointer-events: none;
 }
 
-.luxury-card:hover {
-  transform: translateY(-8px);
-  border-color: var(--line);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(201, 168, 76, 0.12);
+@media (hover: hover) and (pointer: fine) {
+  .luxury-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--line);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(201, 168, 76, 0.12);
+  }
 }
 
 .luxury-card:hover::before {
@@ -472,14 +492,39 @@ textarea:focus-visible {
   animation: scroll-pulse 1.8s ease-in-out infinite;
 }
 
+.cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+@media (max-width: 639px) {
+  .cta-group > a,
+  .cta-group > button {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .btn-solid:hover,
+  .btn-outline:hover {
+    transform: none;
+  }
+}
+
 .page-hero {
   position: relative;
-  min-height: min(72vh, 560px);
+  min-height: auto;
   display: flex;
   align-items: flex-end;
   overflow: hidden;
   color: var(--cream);
   background: var(--bg);
+}
+
+@media (min-width: 768px) {
+  .page-hero {
+    min-height: min(72vh, 560px);
+  }
 }
 
 .page-hero-media {

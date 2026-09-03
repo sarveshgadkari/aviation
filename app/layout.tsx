@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, IBM_Plex_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
@@ -24,6 +24,12 @@ const mono = IBM_Plex_Mono({
   variable: "--font-ibm",
   display: "swap",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#07080c",
+};
 
 export const metadata: Metadata = {
   title: {

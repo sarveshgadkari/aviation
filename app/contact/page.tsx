@@ -28,7 +28,7 @@ export default function ContactPage() {
         </p>
       </PageHero>
 
-      <section className="wrap py-24 md:py-32 grid lg:grid-cols-[0.9fr_1.1fr] gap-16">
+      <section className="wrap py-16 sm:py-24 md:py-32 grid lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-16">
         <Reveal>
           <h2 className="display-title text-4xl md:text-5xl leading-tight">
             Who Should Reach Out
@@ -62,7 +62,7 @@ export default function ContactPage() {
 
         <div className="grid gap-6 self-start">
           <Reveal>
-            <div id="parent-packet" className="luxury-card p-8 md:p-10 scroll-mt-28">
+            <div id="parent-packet" className="luxury-card p-5 sm:p-8 md:p-10 scroll-mt-28">
               <p className="eyebrow">
                 <span className="eyebrow-line" />
                 Parent Info Packet
@@ -80,7 +80,7 @@ export default function ContactPage() {
             </div>
           </Reveal>
           <Reveal delay={100}>
-            <div className="luxury-card p-8 md:p-10">
+            <div className="luxury-card p-5 sm:p-8 md:p-10">
               <InquiryForm />
             </div>
           </Reveal>

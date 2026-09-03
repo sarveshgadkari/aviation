@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import Logo from "@/components/Logo";
 
 const links = [
+  { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/students", label: "Students" },
   { href: "/programs", label: "Programs" },
@@ -38,24 +39,26 @@ export default function Nav() {
 
   return (
     <header className={`site-nav ${scrolled || open ? "is-scrolled" : ""}`}>
-      <div className="wrap flex items-center justify-between py-4 gap-4">
+      <div className="wrap flex items-center justify-between py-3 md:py-4 gap-3">
         <Link href="/" className="min-w-0">
           <Logo size={48} priority showTitle />
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-8 text-[0.72rem] uppercase tracking-[0.18em]">
-          {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`nav-link ${pathname === link.href ? "is-active" : ""}`}
-            >
-              {link.label}
-            </Link>
-          ))}
+        <nav className="hidden lg:flex items-center gap-6 xl:gap-8 text-[0.72rem] uppercase tracking-[0.18em]">
+          {links
+            .filter((link) => link.href !== "/")
+            .map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`nav-link ${pathname === link.href ? "is-active" : ""}`}
+              >
+                {link.label}
+              </Link>
+            ))}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3 shrink-0">
           <Link
             href="/contact"
             className="btn-outline hidden md:inline-block px-4 py-2 text-[0.68rem] uppercase tracking-[0.16em]"
@@ -64,7 +67,7 @@ export default function Nav() {
           </Link>
           <Link
             href="/students"
-            className="btn-solid hidden sm:inline-block px-4 py-2 text-[0.68rem] uppercase tracking-[0.16em]"
+            className="btn-solid hidden sm:inline-block px-3 md:px-4 py-2 text-[0.68rem] uppercase tracking-[0.16em]"
           >
             Apply Now
           </Link>
@@ -93,7 +96,7 @@ export default function Nav() {
           id="mobile-nav"
           className="lg:hidden absolute inset-x-0 top-full overflow-y-auto border-t"
           style={{
-            minHeight: "calc(100dvh - 72px)",
+            minHeight: "calc(100dvh - 64px)",
             borderColor: "var(--line-soft)",
             background: "#07080c",
           }}
@@ -104,7 +107,7 @@ export default function Nav() {
                 key={link.href}
                 href={link.href}
                 className="py-3"
-                style={{ color: "var(--cream)" }}
+                style={{ color: pathname === link.href ? "var(--gold-2)" : "var(--cream)" }}
                 onClick={() => setOpen(false)}
               >
                 {link.label}
@@ -116,6 +119,13 @@ export default function Nav() {
               onClick={() => setOpen(false)}
             >
               Apply Now
+            </Link>
+            <Link
+              href="/contact"
+              className="btn-outline mt-2 px-4 py-3 text-center"
+              onClick={() => setOpen(false)}
+            >
+              Inquiry
             </Link>
           </nav>
         </div>

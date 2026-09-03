@@ -7,7 +7,7 @@ const ROMAN = ["I", "II", "III", "IV", "V", "VI"];
 export default function StudentOpportunities() {
   const s = site.studentOpportunities;
   return (
-    <section id="students" className="py-24 md:py-32">
+    <section id="students" className="py-16 sm:py-24 md:py-32">
       <div className="wrap">
         <Reveal>
           <p className="eyebrow">
@@ -47,8 +47,8 @@ export default function StudentOpportunities() {
           ))}
         </ul>
 
-        <Reveal className="mt-12">
-          <Link href="/students" className="btn-solid inline-block px-7 py-3.5 text-[0.72rem] uppercase tracking-[0.16em]">
+        <Reveal className="cta-group mt-12">
+          <Link href="/students" className="btn-solid px-7 py-3.5 text-[0.72rem] uppercase tracking-[0.16em]">
             {s.cta}
           </Link>
         </Reveal>

@@ -29,7 +29,7 @@ const chapters = [
 export default function Legacy() {
   const l = site.legacy;
   return (
-    <section className="relative overflow-hidden py-24 md:py-32">
+    <section className="relative overflow-hidden py-16 sm:py-24 md:py-32">
       <Atmosphere />
       <div className="wrap relative">
         <Reveal>

@@ -27,7 +27,7 @@ export default function AboutPage() {
         </p>
       </PageHero>
 
-      <section className="wrap py-24 md:py-32 grid lg:grid-cols-[1.1fr_0.9fr] gap-16">
+      <section className="wrap py-16 sm:py-24 md:py-32 grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-16">
         <Reveal>
           <p className="eyebrow">
             <span className="eyebrow-line" />
@@ -41,7 +41,7 @@ export default function AboutPage() {
           </p>
         </Reveal>
         <Reveal delay={120}>
-          <blockquote className="luxury-card p-8">
+          <blockquote className="luxury-card p-5 sm:p-8">
             <p className="text-[0.65rem] uppercase tracking-[0.2em]" style={{ color: "var(--gold)" }}>
               Why we exist
             </p>
@@ -50,7 +50,7 @@ export default function AboutPage() {
         </Reveal>
       </section>
 
-      <section className="py-24 md:py-32" style={{ background: "var(--bg-2)" }}>
+      <section className="py-16 sm:py-24 md:py-32" style={{ background: "var(--bg-2)" }}>
         <div className="wrap">
           <Reveal>
             <p className="eyebrow">
@@ -61,10 +61,10 @@ export default function AboutPage() {
               {site.impact.heading}
             </h2>
           </Reveal>
-          <div className="mt-14 grid sm:grid-cols-3 gap-10">
+          <div className="mt-10 sm:mt-14 grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-10">
             {site.impact.stats.map((stat, i) => (
               <Reveal key={stat.label} delay={i * 80}>
-                <p className="display-title text-5xl md:text-6xl" style={{ color: "var(--gold-2)" }}>
+                <p className="display-title text-3xl sm:text-5xl md:text-6xl" style={{ color: "var(--gold-2)" }}>
                   <StatCounter value={stat.value} />
                 </p>
                 <p className="mt-3 text-[0.68rem] uppercase tracking-[0.18em]" style={{ color: "var(--muted)" }}>
@@ -76,7 +76,7 @@ export default function AboutPage() {
           <p className="mt-8 text-sm" style={{ color: "var(--muted)" }}>
             {site.about.impactNote}
           </p>
-          <div className="mt-10 flex flex-wrap gap-3">
+          <div className="cta-group mt-10">
             <Link href="/students" className="btn-solid px-6 py-3.5 text-[0.72rem] uppercase tracking-[0.16em]">
               Student Opportunities
             </Link>

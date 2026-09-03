@@ -28,11 +28,11 @@ export default function PartnersPage() {
         </p>
       </PageHero>
 
-      <section className="wrap py-24 md:py-32">
+      <section className="wrap py-16 sm:py-24 md:py-32">
         <div className="grid lg:grid-cols-3 gap-5">
           {p.groups.map((g, i) => (
             <Reveal key={g.id} delay={i * 80}>
-              <article id={g.id} className="luxury-card h-full p-8 scroll-mt-28">
+              <article id={g.id} className="luxury-card h-full p-5 sm:p-8 scroll-mt-28">
                 <span className="text-[0.65rem] uppercase tracking-[0.18em]" style={{ color: "var(--gold)" }}>
                   Track {String(i + 1).padStart(2, "0")}
                 </span>
@@ -55,7 +55,7 @@ export default function PartnersPage() {
         </div>
       </section>
 
-      <section className="py-24 md:py-28" style={{ background: "var(--bg-2)" }}>
+      <section className="py-16 sm:py-24 md:py-28" style={{ background: "var(--bg-2)" }}>
         <div className="wrap max-w-3xl">
           <Reveal>
             <p className="eyebrow">
@@ -71,12 +71,14 @@ export default function PartnersPage() {
               control room. Your support becomes someone&apos;s first clear view of
               what&apos;s possible.
             </p>
+            <div className="cta-group mt-10">
             <Link
               href="/contact"
-              className="btn-solid inline-block mt-10 px-7 py-3.5 text-[0.72rem] uppercase tracking-[0.16em]"
+              className="btn-solid px-7 py-3.5 text-[0.72rem] uppercase tracking-[0.16em]"
             >
               Start a Conversation
             </Link>
+            </div>
           </Reveal>
         </div>
       </section>

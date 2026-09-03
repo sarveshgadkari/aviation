@@ -78,7 +78,7 @@ export default function InquiryForm() {
       </label>
       <button
         type="submit"
-        className="btn-solid mt-2 px-7 py-3.5 text-xs tracking-[0.18em] uppercase"
+        className="btn-solid mt-2 w-full px-7 py-3.5 text-xs tracking-[0.18em] uppercase"
       >
         Submit Strategic Inquiry
       </button>

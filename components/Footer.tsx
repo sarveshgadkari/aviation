@@ -22,9 +22,14 @@ export default function Footer() {
 
   return (
     <footer className="relative overflow-hidden border-t" style={{ borderColor: "var(--line-soft)", background: "#06070b" }}>
-      <div className="wrap py-16 grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
-        <div>
-          <Logo size={72} showTitle className="[&_.font-display]:text-3xl" />
+      <div className="wrap py-12 sm:py-16 grid gap-10 sm:gap-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+        <div className="sm:col-span-2 lg:col-span-1">
+          <Logo
+            size={72}
+            showTitle
+            markClassName="h-12 w-12 md:h-[72px] md:w-[72px]"
+            className="[&_.font-display]:text-2xl md:[&_.font-display]:text-3xl"
+          />
           <p className="mt-3 text-sm italic display-italic" style={{ color: "var(--gold-2)" }}>
             Building Aviators. Driving Mid-South Impact.
           </p>
@@ -56,7 +61,7 @@ export default function Footer() {
       </div>
 
       <div
-        className="wrap py-5 flex flex-col sm:flex-row gap-3 justify-between items-center text-[0.7rem] tracking-[0.12em] uppercase border-t"
+        className="wrap py-5 flex flex-col sm:flex-row gap-3 justify-between items-center text-center sm:text-left text-[0.65rem] sm:text-[0.7rem] tracking-[0.12em] uppercase border-t"
         style={{ borderColor: "var(--line-soft)", color: "var(--muted)" }}
       >
         <span>

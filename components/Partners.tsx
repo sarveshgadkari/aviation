@@ -5,7 +5,7 @@ import { site } from "@/data/site";
 export default function Partners() {
   const p = site.partners;
   return (
-    <section id="partners" className="py-24 md:py-32" style={{ background: "var(--bg-2)" }}>
+    <section id="partners" className="py-16 sm:py-24 md:py-32" style={{ background: "var(--bg-2)" }}>
       <div className="wrap">
         <Reveal>
           <p className="eyebrow">
@@ -20,7 +20,7 @@ export default function Partners() {
           </p>
         </Reveal>
 
-        <div className="mt-14 grid md:grid-cols-3 gap-5">
+        <div className="mt-10 sm:mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {p.groups.map((g, i) => (
             <Reveal key={g.id} delay={i * 90}>
               <article id={g.id} className="luxury-card h-full p-7 scroll-mt-28">

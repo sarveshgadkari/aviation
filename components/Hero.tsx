@@ -4,10 +4,10 @@ import Atmosphere from "@/components/Atmosphere";
 import { site } from "@/data/site";
 
 const stats = [
-  { value: "6–12", label: "Student Grades" },
-  { value: "Free", label: "Programs & Flights" },
-  { value: "8", label: "Career Pathways" },
-  { value: "3", label: "States · AR · TN · MS" },
+  { value: "6–12", label: "Student Grades", short: "Grades" },
+  { value: "Free", label: "Programs & Flights", short: "Programs" },
+  { value: "8", label: "Career Pathways", short: "Pathways" },
+  { value: "3", label: "States · AR · TN · MS", short: "AR · TN · MS" },
 ];
 
 export default function Hero() {
@@ -32,13 +32,13 @@ export default function Hero() {
         }}
       />
 
-      <div className="wrap relative w-full pt-32 pb-10 md:pt-40 md:pb-14">
+      <div className="wrap relative w-full pt-28 pb-8 sm:pt-32 sm:pb-10 md:pt-40 md:pb-14">
         <p className="eyebrow animate-rise">
           <span className="eyebrow-line" />
           {site.hero.eyebrow}
         </p>
 
-        <h1 className="display-title mt-7 text-[clamp(3rem,9vw,7.2rem)] max-w-5xl animate-rise-delay-1">
+        <h1 className="display-title mt-5 sm:mt-7 text-[clamp(2.35rem,11vw,7.2rem)] max-w-5xl animate-rise-delay-1">
           {site.hero.headline}
           <span className="block display-italic" style={{ color: "var(--gold-2)" }}>
             {site.hero.headlineItalic}
@@ -46,13 +46,13 @@ export default function Hero() {
         </h1>
 
         <p
-          className="mt-7 max-w-xl text-base md:text-lg leading-relaxed animate-rise-delay-2"
+          className="mt-5 sm:mt-7 max-w-xl text-[0.95rem] sm:text-base md:text-lg leading-relaxed animate-rise-delay-2"
           style={{ color: "var(--ink-soft)" }}
         >
           {site.hero.subhead}
         </p>
 
-        <div className="mt-10 flex flex-wrap gap-3 animate-rise-delay-3">
+        <div className="cta-group mt-8 sm:mt-10 animate-rise-delay-3">
           {site.hero.ctas.slice(0, 2).map((cta) => (
             <Link
               key={cta.label}
@@ -74,17 +74,19 @@ export default function Hero() {
           {stats.map((stat, i) => (
             <div
               key={stat.label}
-              className="py-6 md:py-7 animate-rise-delay-4"
-              style={{
-                borderRight: i === stats.length - 1 ? "none" : "1px solid var(--line-soft)",
-                paddingLeft: i === 0 ? 0 : undefined,
-              }}
+              className={`py-5 sm:py-6 md:py-7 animate-rise-delay-4 ${
+                i % 2 === 0 ? "pr-4" : "pl-4 border-l"
+              } ${i < 2 ? "border-b md:border-b-0" : ""} ${
+                i === 2 ? "md:border-l" : ""
+              } ${i === 1 ? "md:border-l" : ""}`}
+              style={{ borderColor: "var(--line-soft)" }}
             >
-              <p className="display-title text-3xl md:text-4xl" style={{ color: "var(--gold-2)" }}>
+              <p className="display-title text-2xl sm:text-3xl md:text-4xl" style={{ color: "var(--gold-2)" }}>
                 {stat.value}
               </p>
-              <p className="mt-2 text-[0.65rem] uppercase tracking-[0.18em]" style={{ color: "var(--muted)" }}>
-                {stat.label}
+              <p className="mt-2 text-[0.6rem] sm:text-[0.65rem] uppercase tracking-[0.14em] sm:tracking-[0.18em]" style={{ color: "var(--muted)" }}>
+                <span className="sm:hidden">{stat.short}</span>
+                <span className="hidden sm:inline">{stat.label}</span>
               </p>
             </div>
           ))}

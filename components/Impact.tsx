@@ -22,10 +22,10 @@ export default function Impact() {
             {i.heading}
           </h2>
         </Reveal>
-        <div className="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="mt-10 sm:mt-12 grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {stats.map((stat, n) => (
             <Reveal key={stat.label} delay={n * 80}>
-              <p className="display-title text-5xl md:text-6xl" style={{ color: "var(--gold-2)" }}>
+              <p className="display-title text-3xl sm:text-5xl md:text-6xl" style={{ color: "var(--gold-2)" }}>
                 <StatCounter value={stat.value} />
               </p>
               <p className="mt-3 text-[0.68rem] uppercase tracking-[0.18em]" style={{ color: "var(--muted)" }}>

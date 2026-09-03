@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Atmosphere from "@/components/Atmosphere";
-import Logo from "@/components/Logo";
 
 type Props = {
   title: string;
@@ -20,18 +19,15 @@ export default function PageHero({
   children,
 }: Props) {
   return (
-    <section className="page-hero min-h-[78vh]">
+    <section className="page-hero">
       <div className="page-hero-media">
         <Image src={image} alt={imageAlt} fill priority sizes="100vw" />
       </div>
       <Atmosphere />
       <div className="page-hero-shade" />
-      <div className="wrap relative w-full pb-16 pt-32 md:pb-24 md:pt-40">
-        <div className="mb-6 animate-rise">
-          <Logo size={72} />
-        </div>
-        {children && <div className="mb-6 animate-rise-delay-1">{children}</div>}
-        <h1 className="display-title text-[clamp(3rem,8vw,6rem)] max-w-4xl animate-rise-delay-1">
+      <div className="wrap relative w-full pb-12 pt-28 sm:pb-16 sm:pt-32 md:pb-24 md:pt-40">
+        {children && <div className="mb-5 sm:mb-6 animate-rise">{children}</div>}
+        <h1 className="display-title text-[clamp(2.35rem,10vw,6rem)] max-w-4xl animate-rise-delay-1 break-words">
           {title}
           {italic ? (
             <>
@@ -44,7 +40,7 @@ export default function PageHero({
         </h1>
         {subtitle && (
           <p
-            className="mt-6 max-w-2xl text-lg md:text-xl leading-relaxed animate-rise-delay-2"
+            className="mt-5 sm:mt-6 max-w-2xl text-base md:text-xl leading-relaxed animate-rise-delay-2"
             style={{ color: "var(--ink-soft)" }}
           >
             {subtitle}

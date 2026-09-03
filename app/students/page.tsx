@@ -30,7 +30,7 @@ export default function StudentsPage() {
         </p>
       </PageHero>
 
-      <section className="wrap py-24 md:py-32">
+      <section className="wrap py-16 sm:py-24 md:py-32">
         <Reveal>
           <h2 className="display-title text-[clamp(2rem,4.5vw,3.4rem)] max-w-3xl">
             Discovery Flights, Camp, <em className="display-italic">Mentorship & More</em>
@@ -38,11 +38,11 @@ export default function StudentsPage() {
         </Reveal>
         <div className="mt-14 grid md:grid-cols-2 gap-5">
           {s.items.map((item, i) => (
-            <Reveal key={item.title} as="article" delay={i * 70} className="luxury-card p-7 md:p-8">
+            <Reveal key={item.title} as="article" delay={i * 70} className="luxury-card p-5 sm:p-7 md:p-8">
               <span className="text-[0.65rem] uppercase tracking-[0.18em]" style={{ color: "var(--gold)" }}>
                 Opportunity {ROMAN[i]} · {item.age}
               </span>
-              <h3 className="font-display text-3xl mt-4 leading-tight">{item.title}</h3>
+              <h3 className="font-display text-2xl sm:text-3xl mt-4 leading-tight">{item.title}</h3>
               <p className="mt-2 text-xs uppercase tracking-[0.14em]" style={{ color: "var(--muted)" }}>
                 Outcome: {item.outcome}
               </p>
@@ -54,7 +54,7 @@ export default function StudentsPage() {
         </div>
       </section>
 
-      <section className="py-24 md:py-28" style={{ background: "var(--bg-2)" }}>
+      <section className="py-16 sm:py-24 md:py-28" style={{ background: "var(--bg-2)" }}>
         <div className="wrap max-w-3xl">
           <Reveal>
             <p className="eyebrow">
@@ -69,7 +69,7 @@ export default function StudentsPage() {
               grade, and a short note about why you want to fly — we&apos;ll follow
               up with next steps for students and families.
             </p>
-            <div className="mt-10 flex flex-wrap gap-3">
+            <div className="cta-group mt-10">
               <a
                 href={`mailto:${site.contact.email}?subject=Summer%20Flight%20Academy%202026%20Application&body=Student%20name%3A%20%0ASchool%3A%20%0AGrade%3A%20%0AParent%2Fguardian%20email%3A%20%0A%0AWhy%20I%20want%20to%20fly%3A%20`}
                 className="btn-solid px-7 py-3.5 text-[0.72rem] uppercase tracking-[0.16em]"
