@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import PageHero from "@/components/PageHero";
+import Legacy from "@/components/Legacy";
 import StatCounter from "@/components/StatCounter";
 import { site } from "@/data/site";
 
@@ -86,6 +87,8 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      <Legacy />
     </>
   );
 }

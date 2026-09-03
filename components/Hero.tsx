@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import Atmosphere from "@/components/Atmosphere";
+import FlightCraft from "@/components/FlightCraft";
+import FlightHud from "@/components/FlightHud";
 import { site } from "@/data/site";
 
 const stats = [
@@ -20,10 +22,12 @@ export default function Hero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center opacity-25"
+          className="hero-media object-cover object-center opacity-25"
         />
       </div>
-      <Atmosphere />
+      <Atmosphere showRunway />
+      <FlightCraft variant="hero" />
+      <FlightHud />
       <div
         className="absolute inset-0"
         style={{
@@ -93,7 +97,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <a href="#intro" className="scroll-cue absolute right-6 md:right-10 bottom-28 md:bottom-36 animate-fade hidden md:flex">
+      <a href="#pages" className="scroll-cue absolute right-6 md:right-10 bottom-28 md:bottom-36 animate-fade hidden md:flex">
         <span>Scroll</span>
         <span className="scroll-cue-bar" />
       </a>

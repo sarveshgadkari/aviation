@@ -62,9 +62,12 @@ export default function Legacy() {
           ))}
         </div>
 
-        <Reveal className="mt-12">
-          <Link href="/about" className="btn-outline inline-block px-7 py-3.5 text-[0.72rem] uppercase tracking-[0.16em]">
-            Read Our Story
+        <Reveal className="cta-group mt-12">
+          <Link href="/students" className="btn-solid px-7 py-3.5 text-[0.72rem] uppercase tracking-[0.16em]">
+            Student Opportunities
+          </Link>
+          <Link href="/contact" className="btn-outline px-7 py-3.5 text-[0.72rem] uppercase tracking-[0.16em]">
+            Get in Touch
           </Link>
         </Reveal>
       </div>

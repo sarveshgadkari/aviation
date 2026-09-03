@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Atmosphere from "@/components/Atmosphere";
+import FlightCraft from "@/components/FlightCraft";
 
 type Props = {
   title: string;
@@ -21,9 +22,10 @@ export default function PageHero({
   return (
     <section className="page-hero">
       <div className="page-hero-media">
-        <Image src={image} alt={imageAlt} fill priority sizes="100vw" />
+        <Image src={image} alt={imageAlt} fill priority sizes="100vw" className="hero-media" />
       </div>
       <Atmosphere />
+      <FlightCraft variant="page" />
       <div className="page-hero-shade" />
       <div className="wrap relative w-full pb-12 pt-28 sm:pb-16 sm:pt-32 md:pb-24 md:pt-40">
         {children && <div className="mb-5 sm:mb-6 animate-rise">{children}</div>}

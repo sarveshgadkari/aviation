@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Logo from "@/components/Logo";
+import FlightCraft from "@/components/FlightCraft";
 import { site } from "@/data/site";
 
 const columns = [
@@ -22,6 +23,7 @@ export default function Footer() {
 
   return (
     <footer className="relative overflow-hidden border-t" style={{ borderColor: "var(--line-soft)", background: "#06070b" }}>
+      <FlightCraft variant="footer" />
       <div className="wrap py-12 sm:py-16 grid gap-10 sm:gap-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
         <div className="sm:col-span-2 lg:col-span-1">
           <Logo
