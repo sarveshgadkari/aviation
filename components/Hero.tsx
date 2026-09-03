@@ -27,7 +27,6 @@ export default function Hero() {
       </div>
       <Atmosphere showRunway />
       <FlightCraft variant="hero" />
-      <FlightHud />
       <div
         className="absolute inset-0"
         style={{
@@ -37,6 +36,7 @@ export default function Hero() {
       />
 
       <div className="wrap relative w-full pt-28 pb-8 sm:pt-32 sm:pb-10 md:pt-40 md:pb-14">
+        <FlightHud />
         <p className="eyebrow animate-rise">
           <span className="eyebrow-line" />
           {site.hero.eyebrow}
