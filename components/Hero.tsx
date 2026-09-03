@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import Atmosphere from "@/components/Atmosphere";
-import Logo from "@/components/Logo";
 import { site } from "@/data/site";
 
 const stats = [
@@ -34,9 +33,6 @@ export default function Hero() {
       />
 
       <div className="wrap relative w-full pt-32 pb-10 md:pt-40 md:pb-14">
-        <div className="animate-rise mb-6">
-          <Logo size={96} />
-        </div>
         <p className="eyebrow animate-rise">
           <span className="eyebrow-line" />
           {site.hero.eyebrow}
